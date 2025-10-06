@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 int main() {
-	int n1;
+	int n1 = 100;
 	float n2;
-	scanf("%d",&n1);
-	scanf("%f",&n2);
+	// scanf("%d",&n1);
+	// scanf("%f",&n2);
 	// int num = 10;
 	// float f = 10.20;
 	// char c = 'd';
@@ -13,5 +13,5 @@ int main() {
 	// printf("%f\n",f);
 	// printf("%c\n",c);
 	// printf("%b\n",t);
-	printf("%d %.4f",n1,n2);
+	printf("Number is =%d",n1);
 };

@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main(){
-	int a;
-	scanf("%d",&a);
-	printf("%d\n",a);
-	printf("Hello");
+	for(int i = 1; i<=5;i++){
+		printf("%d I am sorry\n",i);
+	};
+	return 0;
 }

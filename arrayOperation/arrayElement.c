@@ -9,18 +9,18 @@ int main (){
 			scanf("%d",&ar[i]);
 		}	
 
-   int idx, val;
-   scanf("%d %d",&idx,&val);
-   for (int i = n; i >=idx +1; i--)
+   int idx;
+   scanf("%d",&idx);
+   for (int i = idx; i <n-1; i++)
    {
    	/* code */
-   	  ar[i] =ar[i-1];
+   	ar[i] = ar[i+1];
+   	 
    }
-   ar[idx] = val;
-
-   for (int i = 0; i <=n; i++)
+   n--;
+   for (int i = 0; i <n; i++)
    {
    	/* code */
-   	printf("%d ", ar[i]);
+   	printf("%d ",ar[i]);
    }
 }

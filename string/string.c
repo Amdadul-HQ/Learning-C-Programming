@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h> 
 int main(){
 
 	// Reverse arrr
@@ -70,36 +71,56 @@ int main(){
 
    //  printf("%s\n", s);
 
-	char s[1000];
-	scanf("%s",s);
-	int count =0;
-	for (int i = 0; s[i] !='\0'; i++)
-	{
-		/* code */
-		count++;
-	}
-	// printf("%d\n",count);
-	int tmp =0;
-	int a =0;
-	int b = count -1;
-	for (int i = 0; i<b; i++)
-	{
-		/* code */
-		if(s[a] == s[b]){
-			tmp =1;
-		}
-		else{
-			tmp=0;
-			break;
-		}
-		a++;
-		b--;
-	}
-	if(tmp == 0){
-		printf("NO");
-	}
-	else{
-		printf("YES");
-	}
+	// char s[1000];
+	// scanf("%s",s);
+	// int count =0;
+	// for (int i = 0; s[i] !='\0'; i++)
+	// {
+	// 	/* code */
+	// 	count++;
+	// }
+	// // printf("%d\n",count);
+	// int tmp =0;
+	// int a =0;
+	// int b = count -1;
+	// for (int i = 0; i<b; i++)
+	// {
+	// 	/* code */
+	// 	if(s[a] == s[b]){
+	// 		tmp =1;
+	// 	}
+	// 	else{
+	// 		tmp=0;
+	// 		break;
+	// 	}
+	// 	a++;
+	// 	b--;
+	// }
+	// if(tmp == 0){
+	// 	printf("NO");
+	// }
+	// else{
+	// 	printf("YES");
+	// }
+
+	char a[11];
+	char b[11];
+
+	scanf("%s",a);
+	scanf("%s",b);
+
+	int sizeOfa = strlen(a);
+	int sizeOfb = strlen(b);
+
+	printf("%d %d\n",sizeOfa,sizeOfb);
+
+	printf("%s%s\n",a,b);	
+
+	char c = a[0];
+	a[0] = b[0];
+	b[0] = c;
+
+	printf("%s %s",a,b);
+
     return 0;
 }

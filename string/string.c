@@ -51,23 +51,55 @@ int main(){
     // }
 
     // conversion
-   char s[100001];
-    scanf("%s", s);
+   // char s[100001];
+   //  scanf("%s", s);
 
-    // Loop through the string
-    for (int i = 0; s[i] != '\0'; i++) {
+   //  // Loop through the string
+   //  for (int i = 0; s[i] != '\0'; i++) {
 
-        if (s[i] == ',') {
-            s[i] = ' ';  // Replace comma with space
-        } 
-        else if (s[i] >= 'a' && s[i] <= 'z') {
-            s[i] = s[i] - 32;  // Convert lowercase → uppercase
-        } 
-        else if (s[i] >= 'A' && s[i] <= 'Z') {
-            s[i] = s[i] + 32;  // Convert uppercase → lowercase
-        }
-    }
+   //      if (s[i] == ',') {
+   //          s[i] = ' ';  // Replace comma with space
+   //      } 
+   //      else if (s[i] >= 'a' && s[i] <= 'z') {
+   //          s[i] = s[i] - 32;  // Convert lowercase → uppercase
+   //      } 
+   //      else if (s[i] >= 'A' && s[i] <= 'Z') {
+   //          s[i] = s[i] + 32;  // Convert uppercase → lowercase
+   //      }
+   //  }
 
-    printf("%s\n", s);
+   //  printf("%s\n", s);
+
+	char s[1000];
+	scanf("%s",s);
+	int count =0;
+	for (int i = 0; s[i] !='\0'; i++)
+	{
+		/* code */
+		count++;
+	}
+	// printf("%d\n",count);
+	int tmp =0;
+	int a =0;
+	int b = count -1;
+	for (int i = 0; i<b; i++)
+	{
+		/* code */
+		if(s[a] == s[b]){
+			tmp =1;
+		}
+		else{
+			tmp=0;
+			break;
+		}
+		a++;
+		b--;
+	}
+	if(tmp == 0){
+		printf("NO");
+	}
+	else{
+		printf("YES");
+	}
     return 0;
 }

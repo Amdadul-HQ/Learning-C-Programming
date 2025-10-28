@@ -81,32 +81,47 @@ int main(){
 
 	// }
 
-	int T;
-	scanf("%d",&T);
+	// int T;
+	// scanf("%d",&T);
 
-	while(T--){
-		char a[10001];
-		int ca = 0;
-		int sa = 0;
-		int di = 0;
-		scanf("%s",a);
-		int length = strlen(a);
+	// while(T--){
+	// 	char a[10001];
+	// 	int ca = 0;
+	// 	int sa = 0;
+	// 	int di = 0;
+	// 	scanf("%s",a);
+	// 	int length = strlen(a);
 
-		for (int i = 0; i < length; i++)
-		{
-			if(a[i] >= 'a' && a[i] <= 'z'){
-				sa++;
-			}
-			else if(a[i] >= 'A' && a[i] <= 'Z'){
-				ca++;
-			}
-			else if(a[i] >= '0' && a[i] <= '9'){
-				di++;
-			}
-		}
+	// 	for (int i = 0; i < length; i++)
+	// 	{
+	// 		if(a[i] >= 'a' && a[i] <= 'z'){
+	// 			sa++;
+	// 		}
+	// 		else if(a[i] >= 'A' && a[i] <= 'Z'){
+	// 			ca++;
+	// 		}
+	// 		else if(a[i] >= '0' && a[i] <= '9'){
+	// 			di++;
+	// 		}
+	// 	}
 
-		printf("%d %d %d\n",ca,sa,di);
+	// 	printf("%d %d %d\n",ca,sa,di);
+	// }
+		
+	char s[1001];
+	scanf("%s",s);
+
+	int freq[26] ={0};
+
+	for (int i = 0; s[i] != '\0'; i++)
+	{
+		/* code */
+		freq[s[i] - 'a']++;
 	}
-	
-	
+
+	for (int i = 0; i < 26; i++) {
+        if (freq[i] > 0) {
+            printf("%c - %d\n", i + 'a', freq[i]);
+        }
+    }
 }

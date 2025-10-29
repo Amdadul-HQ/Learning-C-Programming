@@ -124,4 +124,5 @@ int main(){
             printf("%c - %d\n", i + 'a', freq[i]);
         }
     }
+    
 }

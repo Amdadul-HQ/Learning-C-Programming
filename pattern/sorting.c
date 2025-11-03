@@ -1,32 +1,37 @@
 #include <stdio.h>
 
 int main () {
-	int n;
-	scanf("%d",&n);
-	int a[n];
-	for (int i = 0; i < n; i++)
-	{
-		/* code */
-		scanf("%d",&a[i]);
-	}
+	// int n;
+	// scanf("%d",&n);
+	// int a[n];
+	// for (int i = 0; i < n; i++)
+	// {
+	// 	/* code */
+	// 	scanf("%d",&a[i]);
+	// }
 
-	for (int i = 0; i < n-1; i++)
+	// for (int i = 0; i < n-1; i++)
+	// {
+	// 	/* code */
+	// 	for (int j = i+1 ; j < n; j++)
+	// 	{
+	// 		/* code */
+	// 		if(a[i]<a[j]){
+	// 			int tmp = a[i];
+	// 			a[i] = a[j];
+	// 			a[j] = tmp;
+	// 		}
+	// 	}
+
+	// }
+	for (int i = 1; i <= 3; i++)
 	{
 		/* code */
-		for (int j = i+1 ; j < n; j++)
+		for (int j = 1; j <=i ; j++)
 		{
 			/* code */
-			if(a[i]<a[j]){
-				int tmp = a[i];
-				a[i] = a[j];
-				a[j] = tmp;
-			}
+			printf("%d ",j);
 		}
-
-	}
-	for (int i = 0; i < n; i++)
-	{
-		/* code */
-		printf("%d ",a[i]);
+		
 	}
 }

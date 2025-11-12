@@ -13,30 +13,28 @@ int findMax(int a[],int n){
         return max_rest;
 }
 
-int sumFun(int a[],int n){
-	if(n==1){
-		return a[0];
-	}
-	int num = sumFun(a,n-1);
 
-	return num + a[n-1];
+long long int sumFun(long long int a[], int n) {
+    if (n == 1)
+        return a[0];
+
+    long long int num = sumFun(a, n - 1);
+    return num + a[n - 1];
 }
 
+int main() {
+    int n;
+    scanf("%d", &n);
+    long long int a[n];
 
-int main(){
+    for (int i = 0; i < n; i++) {
+        scanf("%lld", &a[i]);
+    }
 
-	int n;
-	scanf("%d",&n);
-	int a[n];
-	for (int i = 0; i < n; i++)
-	{
-		/* code */
-		scanf("%d",&a[i]);
-	}
+    long long int sum = sumFun(a, n);
+    printf("%lld\n", sum);
 
-	int sum = sumFun(a,n);
-	printf("%d",sum);
-
+    return 0;
 
 	// Recursive max solve
 	// int n;

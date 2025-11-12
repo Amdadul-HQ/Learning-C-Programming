@@ -13,6 +13,15 @@ int findMax(int a[],int n){
         return max_rest;
 }
 
+int sumFun(int a[],int n){
+	if(n==1){
+		return a[0];
+	}
+	int num = sumFun(a,n-1);
+
+	return num + a[n-1];
+}
+
 
 int main(){
 
@@ -25,8 +34,22 @@ int main(){
 		scanf("%d",&a[i]);
 	}
 
-	int max = findMax(a,n);
-	printf("%d",max);
+	int sum = sumFun(a,n);
+	printf("%d",sum);
+
+
+	// Recursive max solve
+	// int n;
+	// scanf("%d",&n);
+	// int a[n];
+	// for (int i = 0; i < n; i++)
+	// {
+	// 	/* code */
+	// 	scanf("%d",&a[i]);
+	// }
+
+	// int max = findMax(a,n);
+	// printf("%d",max);
 
 	// int n;
 	// scanf("%d",&n);

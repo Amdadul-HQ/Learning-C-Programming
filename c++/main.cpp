@@ -1,5 +1,8 @@
 #include <iostream>
+using namespace std;
 int main(){
-	int x =10;
-	std::cout << "Hello" << "\n" << x;
+	int x;
+	cin >> x;
+	cout << x;
+	// std::cout << "Hello" << "\n" << x;
 }

@@ -1,4 +1,5 @@
 #include <iostream>
 int main(){
-	std::cout << "Hello world";
+	int x =10;
+	std::cout << "Hello" << "\n" << x;
 }

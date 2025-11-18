@@ -13,7 +13,19 @@ void fun (){
 }
 
 int main(){
-	fun();
-	cout << "Main =>" << *p << endl;
-	return 0;
+
+	int *a = new int[5];
+	for (int i = 0; i < 5; i++)
+	{
+		/* code */
+		cin >> a[i];
+	}
+	for (int i = 0; i < 5; i++)
+	{
+		/* code */
+		cout << a[i] << " ";
+	}
+	// fun();
+	// cout << "Main =>" << *p << endl;
+	// return 0;
 }

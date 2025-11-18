@@ -4,8 +4,10 @@ using namespace std;
 int *p;
 
 void fun (){
-	int x = 10;
-	p = &x;
+	
+	int *x = new int;
+	*x = 10;
+	p = x;
 	cout << "Fun =>" << *p << endl;
 	return;
 }

@@ -9,13 +9,15 @@ class Student
  double gpa;
  Student (int roll,double gpa)
  {
- 	this->roll = roll;
- 	this->gpa = gpa;
+ 	// this->roll = roll;
+ 	// this->gpa = gpa;
+ 	(*this).roll = roll;
+ 	(*this).gpa = gpa;
  }
 };
 
 int main() {
-	Student rahim(30,4.5);
+	Student rahim(31,4.5);
 
 	cout << rahim.roll << " " << rahim.gpa << endl; 
 	// Student a,b,c;

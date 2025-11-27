@@ -5,12 +5,30 @@ int main(){
 
 
 	string s;
+	getline(cin,s);
+	stringstream ss(s);
 
-	cin >> s ;
+	string word;
 
-	sort(s.begin(),s.end(),greater<char>());
+	while(ss >> word){
+		// cout << word << endl;
+		reverse(word.begin(),word.end());
+		cout << word << " ";
+	}
 
-	cout << s ;
+	// cin >> s ;
+
+	// for (char c : s)
+	// {
+	// 	/* code */
+	// 	cout << c << endl;
+	// }
+
+
+
+	// sort(s.begin(),s.end(),greater<char>());
+
+	// cout << s ;
 
 
 

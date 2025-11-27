@@ -10,10 +10,13 @@ int main(){
 
 	string word;
 
+	ss >> word;
+	cout << word;
+
 	while(ss >> word){
 		// cout << word << endl;
 		reverse(word.begin(),word.end());
-		cout << word << " ";
+		cout << " " << word;
 	}
 
 	// cin >> s ;

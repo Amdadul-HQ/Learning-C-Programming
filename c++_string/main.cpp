@@ -2,5 +2,12 @@
 using namespace std;
 
 int main(){
-	printf("hello");
+
+	//type one
+	string s = "hello";
+
+
+	//type two
+	// string s("hello");
+	cout << s << endl;
 }

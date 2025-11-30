@@ -17,12 +17,35 @@ public:
 	}
 };
 
-int main(){
-   
-   Student rimon("Rimon HQ",23);
+class Cricter {
+public:
+	string country;
+	int jersy;
+	Cricter(string country, int jersy){
+		this->country = country;
+		this->jersy = jersy;
+	}
+};
 
-   rimon.hello();
-   rimon.age();
+int main(){
+
+	Cricter* dhoni = new Cricter("india",1566);
+    Cricter* kholi = new Cricter("india",18);
+	// cout << (*dhoni).country << endl;
+	// cout << (*dhoni).jersy << endl;
+	// kholi = dhoni;
+
+	*kholi = *dhoni; 
+
+	delete dhoni;
+
+    cout << (*kholi).country << endl;
+	cout << (*kholi).jersy << endl;
+   
+   // Student rimon("Rimon HQ",23);
+
+   // rimon.hello();
+   // rimon.age();
 
    // cout << rimon.name << endl;
    // cout << rimon.roll << endl;

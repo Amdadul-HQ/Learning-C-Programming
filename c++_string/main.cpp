@@ -9,14 +9,23 @@ public:
 		this->name = name;
 		this->roll = roll;
 	}
+	void hello () {
+		cout << name << endl;
+	}
+	void age () {
+		cout << roll << endl;
+	}
 };
 
 int main(){
    
    Student rimon("Rimon HQ",23);
 
-   cout << rimon.name << endl;
-   cout << rimon.roll << endl;
+   rimon.hello();
+   rimon.age();
+
+   // cout << rimon.name << endl;
+   // cout << rimon.roll << endl;
 
 	// string s;
 	// getline(cin,s);

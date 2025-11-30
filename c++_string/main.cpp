@@ -1,23 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-
-
-	string s;
-	getline(cin,s);
-	stringstream ss(s);
-
-	string word;
-
-	ss >> word;
-	cout << word;
-
-	while(ss >> word){
-		// cout << word << endl;
-		reverse(word.begin(),word.end());
-		cout << " " << word;
+class Student {
+public:
+	string name;
+	int roll;
+	Student (string name, int roll) {
+		this->name = name;
+		this->roll = roll;
 	}
+};
+
+int main(){
+   
+   Student rimon("Rimon HQ",23);
+
+   cout << rimon.name << endl;
+   cout << rimon.roll << endl;
+
+	// string s;
+	// getline(cin,s);
+	// stringstream ss(s);
+
+	// string word;
+
+	// ss >> word;
+	// cout << word;
+
+	// while(ss >> word){
+	// 	// cout << word << endl;
+	// 	reverse(word.begin(),word.end());
+	// 	cout << " " << word;
+	// }
 
 	// cin >> s ;
 

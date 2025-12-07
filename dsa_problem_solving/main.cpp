@@ -52,34 +52,61 @@ using namespace std;
 //     return 0;
 // }
 
-int main() {
+// int main() {
+// 	int T;
+// 	cin >> T;
+// 	while (T--){
+
+// 	char a[6];
+
+// 	int flag = 0;
+
+// 	for(int i = 0 ; i<6 ; i++)
+// 		{
+// 			cin >> a[i];
+// 		}
+// 	for(int i = 0 ; i<6 ; i++)
+// 		{
+// 			// cout << a[i] << " ";
+// 			if(a[i] == 'W' && a[i + 1] == 'W' && a[i - 1] == 'W')
+// 			{
+// 				flag = 1;
+// 			}
+// 		}
+// 	if(flag == 1){
+// 		cout << "YES";
+// 	}
+// 	else {
+// 		cout << "NO";
+// 	}
+// 	cout << endl;
+// 	}
+	
+// }
+
+int main () {
 	int T;
 	cin >> T;
-	while (T--){
-
-	char a[6];
-
-	int flag = 0;
-
-	for(int i = 0 ; i<6 ; i++)
-		{
-			cin >> a[i];
-		}
-	for(int i = 0 ; i<6 ; i++)
-		{
-			// cout << a[i] << " ";
-			if(a[i] == 'W' && a[i + 1] == 'W' && a[i - 1] == 'W')
-			{
-				flag = 1;
-			}
-		}
-	if(flag == 1){
-		cout << "YES";
+	while(T--){
+int target,close_range;
+	cin >> target >> close_range;
+	int a[target];
+	int currentGun = 0;
+	int switchCount = 0;
+	for (int i = 0; i < target; i++)
+	{
+		cin >> a[i];
 	}
-	else {
-		cout << "NO";
+	for (int i = 0; i < target; i++)
+	{
+		int requiredGun = a[i] <= close_range ? 0 : 1;
+
+		if(requiredGun != currentGun){
+			currentGun = requiredGun;
+			switchCount++;
+		}
 	}
+	cout << switchCount;
 	cout << endl;
 	}
-	
 }

@@ -84,29 +84,98 @@ using namespace std;
 	
 // }
 
-int main () {
-	int T;
-	cin >> T;
-	while(T--){
-int target,close_range;
-	cin >> target >> close_range;
-	int a[target];
-	int currentGun = 0;
-	int switchCount = 0;
-	for (int i = 0; i < target; i++)
-	{
-		cin >> a[i];
-	}
-	for (int i = 0; i < target; i++)
-	{
-		int requiredGun = a[i] <= close_range ? 0 : 1;
+// int main () {
+// 	int T;
+// 	cin >> T;
+// 	while(T--){
+// int target,close_range;
+// 	cin >> target >> close_range;
+// 	int a[target];
+// 	int currentGun = 0;
+// 	int switchCount = 0;
+// 	for (int i = 0; i < target; i++)
+// 	{
+// 		cin >> a[i];
+// 	}
+// 	for (int i = 0; i < target; i++)
+// 	{
+// 		int requiredGun = a[i] <= close_range ? 0 : 1;
 
-		if(requiredGun != currentGun){
-			currentGun = requiredGun;
-			switchCount++;
-		}
-	}
-	cout << switchCount;
-	cout << endl;
-	}
+// 		if(requiredGun != currentGun){
+// 			currentGun = requiredGun;
+// 			switchCount++;
+// 		}
+// 	}
+// 	cout << switchCount;
+// 	cout << endl;
+// 	}
+// }
+
+// int main (){
+// 	int number_of_jar;
+// 	double number_of_child;
+// 	cin >> number_of_jar >>  number_of_child;
+
+// 	int a[number_of_jar];
+// 	int min_value;
+
+// 	for (int i = 0; i <number_of_jar; i++)
+// 	{
+// 		cin >>  a[i];
+// 	}
+
+// 	for (int i = 0; i <number_of_jar; i++)
+// 	{
+// 		if(a[i]<number_of_child){
+			
+// 		}
+// 		else{
+// 		double sum = a[i] / number_of_child;
+// 		int equal = floor(sum);
+// 		int waste = a[i] - (equal * number_of_child);
+// 			if(min_value<waste){
+// 				min_value = waste;
+// 			}
+// 		}
+		
+// 	}
+// 	cout << min_value;
+// }
+
+
+
+// int main (){
+// 	int T;
+// 	cin >> T;
+// 	while(T--){
+// 		int n,x;
+// 		cin >> n >> x;
+// 		if(n>x){
+// 			cout << "NO" << endl;
+// 		}
+// 		else {
+// 			cout << "YES" << endl;
+// 		}
+// 	}
+// }
+
+
+int main() {
+    int T;
+    cin >> T;
+    while(T--){
+        int N, X, Y;
+        cin >> N >> X >> Y;
+
+        int ans = 0;
+
+        if (Y >= 2 * X) {
+            ans = (N / 2) * Y + (N % 2) * X;
+        } 
+        else {
+            ans = N * X;
+        }
+
+        cout << ans << endl;
+    }
 }

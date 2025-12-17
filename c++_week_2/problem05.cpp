@@ -10,8 +10,7 @@ int main() {
         int N, X;
         cin >> N >> X;
 
-        int k = N - X;  // number of profitable customers
-
+        int k = N - X;  
         if (k <= 0) {
             cout << 0 << endl;
         } else {

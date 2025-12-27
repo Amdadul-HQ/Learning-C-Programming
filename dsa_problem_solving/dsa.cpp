@@ -13,12 +13,38 @@ public:
 
 void insert_at_head (Node* &head,int val){
 	Node* newnode = new Node(val);
+	if(head == NULL){
+		head = newnode;
+		return;
+	}
 	newnode->next = head;
 	head = newnode;
 };
 
+void insert_at_any (Node* &head,int index,int val){
+	Node* newnode = new Node(val);
+	if(head == NULL){
+		head = newnode;
+		return;
+	}
+	Node* tmp = head;
+	for (int i = 0; i < index-1; i++)
+	{
+		/* code */
+		tmp = tmp->next;
+	}
+	newnode->next = tmp->next;
+	tmp->next = newnode;
+
+};
+
+
 void inser_at_tail (Node* &head,int val){
 	Node* newnode = new Node(val);
+	if(head == NULL){
+		head = newnode;
+		return;
+	}
 	Node* tmp = head;
 	while(tmp->next != NULL){
 		tmp = tmp->next;
@@ -35,6 +61,7 @@ void print_link_list (Node* head){
 }
 
 int main () {
+	// Node* head = NULL;
 	Node* head = new Node(10);
 	Node* a = new Node(20);
 	Node* b = new Node(30);
@@ -42,7 +69,10 @@ int main () {
 	head->next = a;
 	a->next = b;
 
-	insert_at_head(head,100);
-	inser_at_tail(head,200);
+	// insert_at_head(head,100);
+	// insert_at_head(head,200);
+	// insert_at_head(head,300);
+	// inser_at_tail(head,200);
+	insert_at_any(head,2,100);
 	print_link_list(head);
 }

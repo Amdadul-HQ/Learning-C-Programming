@@ -39,17 +39,18 @@ void insert_at_any (Node* &head,int index,int val){
 };
 
 
-void inser_at_tail (Node* &head,int val){
+void inser_at_tail (Node* &head,Node* &tail,int val){
 	Node* newnode = new Node(val);
 	if(head == NULL){
 		head = newnode;
 		return;
 	}
-	Node* tmp = head;
-	while(tmp->next != NULL){
-		tmp = tmp->next;
-	}
-	tmp->next = newnode;
+	// Node* tmp = head;
+	// while(tmp->next != NULL){
+	// 	tmp = tmp->next;
+	// }
+	tail->next = newnode;
+	tail = tail->next;
 }
 
 void print_link_list (Node* head){
@@ -74,5 +75,6 @@ int main () {
 	// insert_at_head(head,300);
 	// inser_at_tail(head,200);
 	insert_at_any(head,2,100);
+	inser_at_tail(head,b,200);
 	print_link_list(head);
 }

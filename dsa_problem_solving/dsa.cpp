@@ -37,9 +37,19 @@ public:
 	}
 };
 
-void insert_at_head (Node* head,int val){
-	cout << val;
+void insert_at_head (Node* &head,int val){
+	Node* newnode = new Node(val);
+	newnode->next = head;
+	head = newnode;
 };
+
+void print_link_list (Node* head){
+	Node* tmp = head;
+	while(tmp != NULL){
+		cout << tmp->val << endl;
+		tmp = tmp->next;
+	}
+}
 
 int main () {
 	Node* head = new Node(10);
@@ -50,4 +60,5 @@ int main () {
 	a->next = b;
 
 	insert_at_head(head,100);
+	print_link_list(head);
 }

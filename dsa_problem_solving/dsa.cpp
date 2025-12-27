@@ -1,32 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// int main(){
-// 	int n;
-// 	cin >> n;
-// 	int a[n];
-// 	for (int i = 0; i < n; i++)
-// 	{
-// 		cin >> a[i];
-// 	}
-
-// 	int preSum[n];
-
-// 	preSum[0] = a[0];
-
-// 	for (int i = 1; i < n; i++)
-// 	{
-// 		preSum[i] = preSum[i - 1] + a[i];
-// 		cin >> preSum[i];	
-// 	}
-
-// 	for (int i = 0; i < n; i++)
-// 	{
-// 		cout << preSum[i] << " ";
-// 	}
-// }
-
-
 class Node {
 public:
 	int val;
@@ -42,6 +16,15 @@ void insert_at_head (Node* &head,int val){
 	newnode->next = head;
 	head = newnode;
 };
+
+void inser_at_tail (Node* &head,int val){
+	Node* newnode = new Node(val);
+	Node* tmp = head;
+	while(tmp->next != NULL){
+		tmp = tmp->next;
+	}
+	tmp->next = newnode;
+}
 
 void print_link_list (Node* head){
 	Node* tmp = head;
@@ -60,5 +43,6 @@ int main () {
 	a->next = b;
 
 	insert_at_head(head,100);
+	inser_at_tail(head,200);
 	print_link_list(head);
 }

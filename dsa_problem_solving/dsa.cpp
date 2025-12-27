@@ -1,27 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-	int n;
-	cin >> n;
-	int a[n];
-	for (int i = 0; i < n; i++)
-	{
-		cin >> a[i];
-	}
+// int main(){
+// 	int n;
+// 	cin >> n;
+// 	int a[n];
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		cin >> a[i];
+// 	}
 
-	int preSum[n];
+// 	int preSum[n];
 
-	preSum[0] = a[0];
+// 	preSum[0] = a[0];
 
-	for (int i = 1; i < n; i++)
-	{
-		preSum[i] = preSum[i - 1] + a[i];
-		cin >> preSum[i];	
-	}
+// 	for (int i = 1; i < n; i++)
+// 	{
+// 		preSum[i] = preSum[i - 1] + a[i];
+// 		cin >> preSum[i];	
+// 	}
 
-	for (int i = 0; i < n; i++)
-	{
-		cout << preSum[i] << " ";
-	}
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		cout << preSum[i] << " ";
+// 	}
+// }
+
+int main () {
+	
 }
